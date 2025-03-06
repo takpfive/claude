@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>臼井氏インタビュー - グラフィックレコーディング</title>
+    <style>
+        :root {
+            --fashion-1: #00838F;
+            --fashion-2: #546E7A;
+            --fashion-3: #616161;
+            --fashion-4: #000000;
+            --fashion-5: #00838F;
+            --text-dark: #000000;
+            --text-header: #00838F;
+            --text-subheader: #546E7A;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Meiryo UI', 'MS UI Gothic', sans-serif;
+            background-color: #f8f9fa;
+            color: var(--text-dark);
+            line-height: 1.4;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--fashion-1);
+        }
+        
+        .title {
+            font-family: 'Meiryo UI', 'MS UI Gothic', sans-serif;
+            font-size: 32px;
+            font-weight: bold;
+            background: linear-gradient(45deg, var(--fashion-1), var(--fashion-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .title::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 8px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M0,5 C15,2 35,8 50,5 C65,2 85,8 100,5' stroke='%23546E7A' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x;
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+        }
+        
+        .date {
+            font-family: 'Meiryo UI', 'MS UI Gothic', sans-serif;
+            font-size: 16px;
+            color: var(--text-subheader);
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .column {
+            flex: 1 1 30%;
+            min-width: 300px;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(89, 60, 71, 0.1);
+        }
+        
+        .section-title {
+            font-family: 'Meiryo UI', 'MS UI Gothic', sans-serif;
+            font-size: 18px;
+            color: var(--text-header);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--fashion-2);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .section-title::before {
+            content: "▶";
+            color: var(--fashion-1);
+            font-size: 14px;
+        }
+        
+        .text {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .keyword {
+            font-weight: bold;
+            position: relative;
+            display: inline;
+            padding: 0 2px;
+        }
+        
+        .keyword-1 {
+            background: linear-gradient(transparent 60%, rgba(0, 131, 143, 0.3) 60%);
+        }
+        
+        .keyword-2 {
+            background: linear-gradient(transparent 60%, rgba(84, 110, 122, 0.3) 60%);
+        }
+        
+        .keyword-3 {
+            background: linear-gradient(transparent 60%, rgba(97, 97, 97, 0.3) 60%);
+        }
+        
+        .bubble {
+            background-color: rgba(0, 131, 143, 0.1);
+            border-left: 4px solid var(--fashion-1);
+            border-radius: 4px;
+            padding: 12px 15px;
+            margin: 15px 0;
+            position: relative;
+        }
+        
+        .list {
+            margin: 10px 0 10px 25px;
+        }
+        
+        .list-item {
+            position: relative;
+            margin-bottom: 8px;
+        }
+        
+        .list-item::before {
+            content: "•";
+            color: var(--fashion-1);
+            position: absolute;
+            left: -15px;
+            font-weight: bold;
+        }
+        
+        .arrow {
+            display: block;
+            width: 40px;
+            height: 20px;
+            margin: 10px auto;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 20'%3E%3Cpath d='M0,10 C10,5 30,15 40,10 L37,5 M37,15 L40,10' stroke='%2300838F' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;
+        }
+        
+        .card {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 4px;
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid rgba(84, 110, 122, 0.3);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .card-title {
+            font-family: 'Meiryo UI', 'MS UI Gothic', sans-serif;
+            font-size: 16px;
+            color: var(--fashion-1);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .card-title::before {
+            content: "■";
+            color: var(--fashion-1);
+            font-size: 12px;
+        }
+        
+        .gadget-icon {
+            font-size: 24px;
+            margin-right: 10px;
+            color: var(--fashion-1);
+        }
+        
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid var(--fashion-1);
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-subheader);
+        }
+        
+        .connection-line {
+            position: absolute;
+            z-index: -1;
+        }
+        
+        @media (max-width: 768px) {
+            .column {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">インタビュー内容まとめ</h1>
+            <div class="date">2025年3月6日</div>
+        </div>
+        
+        <div class="content">
+            <!-- 第1カラム -->
+            <div class="column">
+                <div class="section">
+                    <h2 class="section-title">インタビューの導入</h2>
+                    <p class="text">インタビュアーと臼井氏の挨拶から始まり、今回のインタビューは<span class="keyword keyword-1">スキルアップ特集</span>のためのものであり、臼井氏の著書<span class="keyword keyword-2">「ノションの本」</span>がきっかけになったことが説明されました。</p>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">タスク管理ツールの現状と展望</h2>
+                    <div class="bubble">
+                        <p class="text">手帳での管理から<span class="keyword keyword-3">デジタル管理</span>への移行が進んでいます。</p>
+                    </div>
+                    <p class="text">現代のトレンド:</p>
+                    <ul class="list">
+                        <li class="list-item">PCよりも<span class="keyword keyword-1">スマホで手軽に使える</span>ツールが重要</li>
+                        <li class="list-item">スマホとPCで<span class="keyword keyword-2">同期できる</span>ことが望ましい</li>
+                        <li class="list-item">2020年頃から<span class="keyword keyword-3">Notion</span>が流行し始めた</li>
+                        <li class="list-item">Notionに類似したアプリや代替アプリが増加</li>
+                    </ul>
+                    <div class="arrow"></div>
+                    <p class="text">Notionはタスク管理ツールの<span class="keyword keyword-1">先駆け</span>であり、臼井氏自身も最も使っているツールです。</p>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">人気のタスク管理ツール</h2>
+                    <p class="text">一般的に人気のあるタスク管理ツール:</p>
+                    <div class="card">
+                        <h3 class="card-title">主なツール一覧</h3>
+                        <ul class="list">
+                            <li class="list-item">Notion</li>
+                            <li class="list-item">iPhoneのメモアプリ</li>
+                            <li class="list-item">iPhoneのリマインダー</li>
+                            <li class="list-item">チックチック</li>
+                            <li class="list-item">Googleカレンダー</li>
+                            <li class="list-item">Trello</li>
+                            <li class="list-item">Structured（最近話題）</li>
+                        </ul>
+                    </div>
+                    <p class="text">実は<span class="keyword keyword-3">多くの人はタスク管理自体をしていない</span>のが現状です。</p>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">タスク管理の実態と必要性</h2>
+                    <p class="text">タスク管理をしている人は<span class="keyword keyword-2">まだ少数派</span>であり、SNS上の「キラキラしたタスク管理術」に憧れはするものの、実際には難しいと感じている人が多いようです。</p>
+                    <div class="bubble">
+                        <p class="text">几帳面な女性にタスク管理を丁寧に行っている人が多い傾向があります。多くの男性は、やるべきことだけをGoogleカレンダーに入れる程度です。</p>
+                    </div>
+                    <p class="text">タスク管理の本当の価値:</p>
+                    <ul class="list">
+                        <li class="list-item">多くの人は<span class="keyword keyword-1">重要ではないが緊急な</span>タスクに追われている</li>
+                        <li class="list-item">本当に重要なのは、<span class="keyword keyword-3">重要でありながら緊急ではない</span>タスク</li>
+                        <li class="list-item">重要かつ緊急ではないタスクを実行するためには<span class="keyword keyword-2">タスク管理が不可欠</span></li>
+                    </ul>
+                    <p class="text">タスク管理は本来<span class="keyword keyword-1">手段</span>だが、<span class="keyword keyword-1">目的</span>として始めるのも有効です。</p>
+                </div>
+            </div>
+            
+            <!-- 第2カラム -->
+            <div class="column">
+                <div class="section">
+                    <h2 class="section-title">タスク管理のメリットと自己形成</h2>
+                    <p class="text">タスク管理によって<span class="keyword keyword-3">時間があることに気づき</span>、新しいことに挑戦できるようになります。</p>
+                    <div class="bubble">
+                        <p class="text"><span class="keyword keyword-2">日々の意思決定が人格を作る</span>。タスク管理を通じて理想の自分を作り、その通りに意思決定をすることで人格は変わります。</p>
+                    </div>
+                    <p class="text">行動の変化とその難しさ:</p>
+                    <ul class="list">
+                        <li class="list-item">多くの人は理想を追い求めることに疲れている</li>
+                        <li class="list-item">消費的な趣味は手軽にドーパミンを得られる</li>
+                        <li class="list-item">積極的な行動は疲れる</li>
+                    </ul>
+                    <div class="card">
+                        <h3 class="card-title">大前研一氏の言葉</h3>
+                        <p class="text">消費的な趣味をやめるためには、<span class="keyword keyword-1">住む場所</span>、<span class="keyword keyword-2">過ごす時間</span>、<span class="keyword keyword-3">過ごす人</span>を変えることが重要です。</p>
+                    </div>
+                    <p class="text"><span class="keyword keyword-1">決意だけでは人は変わらない</span>。Notionは単なるツールではなく、<span class="keyword keyword-2">ライフスタイルを実現するためのもの</span>です。</p>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">他のタスク管理ツールの比較</h2>
+                    <p class="text">Notionは<span class="keyword keyword-1">多機能すぎる</span>ため、単純なタスク管理には他のツールの方が向いている場合があります。</p>
+                    <div class="bubble">
+                        <p class="text">タスク管理の基本的な要素は、<span class="keyword keyword-2">タスクの追加</span>と<span class="keyword keyword-3">分類</span>です。</p>
+                    </div>
+                    <p class="text">分類方法の例:</p>
+                    <ul class="list">
+                        <li class="list-item">時間による分類</li>
+                        <li class="list-item">緊急度による分類</li>
+                        <li class="list-item">優先度による分類</li>
+                    </ul>
+                    <div class="arrow"></div>
+                    <p class="text">ツールの比較:</p>
+                    <ul class="list">
+                        <li class="list-item">Notionは<span class="keyword keyword-3">最も自由度が高い</span></li>
+                        <li class="list-item">iPhoneのリマインダーは<span class="keyword keyword-1">最も自由度が低い</span></li>
+                    </ul>
+                    <p class="text">どのツールを使うかは個人の自由であり、ツールの機能に大きな差はありません。</p>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">初心者向けのタスク管理</h2>
+                    <p class="text">Notionは初心者には難しいため、臼井氏は初心者向けのNotion講座も行っています。</p>
+                    <div class="card">
+                        <h3 class="card-title">初心者向けおすすめツール</h3>
+                        <ul class="list">
+                            <li class="list-item"><span class="keyword keyword-1">Googleカレンダー</span>にタスクを書き込む（日程をブロック）</li>
+                            <li class="list-item"><span class="keyword keyword-2">TimeTree</span>などのカレンダーアプリ</li>
+                            <li class="list-item"><span class="keyword keyword-3">iPhoneのリマインダー</span></li>
+                            <li class="list-item"><span class="keyword keyword-2">iPhoneのメモアプリ</span>にタスクを書き出し、完了したら消していく</li>
+                        </ul>
+                    </div>
+                    <div class="bubble">
+                        <p class="text">タスク管理をしたことがない人がいきなりNotionを始めても<span class="keyword keyword-3">挫折する可能性が高い</span>です。</p>
+                    </div>
+                    <p class="text">初心者向けのNotion講座では、基本的な操作方法やタスク管理の方法を教えています。</p>
+                </div>
+            </div>
+            
+            <!-- 第3カラム -->
+            <div class="column">
+                <div class="section">
+                    <h2 class="section-title">タスク管理を継続するための考え方</h2>
+                    <p class="text">ツールを使っても<span class="keyword keyword-1">やらない人は多い</span>（約99%）。行動することは面倒です。</p>
+                    <div class="bubble">
+                        <p class="text"><span class="keyword keyword-3">仕組みで解決する</span>ことが重要です。努力しようと思ってもできないため、努力しなくても習慣化する仕組みを作るべきです。</p>
+                    </div>
+                    <p class="text">仕組み化の例:</p>
+                    <ul class="list">
+                        <li class="list-item">遅刻するなら時計を早める</li>
+                        <li class="list-item">朝早く起きるためにアラームをリビングに置く</li>
+                        <li class="list-item">家のライフラインを止めてジムに行くしかない状況を作る</li>
+                    </ul>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">時間管理が難しい4つのタイプへのアドバイス</h2>
+                    <div class="card">
+                        <h3 class="card-title">スタートでつまずく（先延ばし）タイプ</h3>
+                        <p class="text">完璧主義である可能性が高いです。自分のアウトプットは最初から100点ではないと理解し、<span class="keyword keyword-1">まず何でもいいからやってみて</span>、自分の実力を知りましょう。</p>
+                        <p class="text">AIを活用することで得意になり、楽しくなる可能性があります。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card-title">プランが計画倒れタイプ</h3>
+                        <p class="text">非現実的な計画を立てがちです。立てたプランを<span class="keyword keyword-2">1/10にする</span>のが良いでしょう。本当にやるべきことだけを抜き出します。</p>
+                        <p class="text">「これだけやる」と決めてやりきり、余裕があれば追加しましょう。タスクを書くだけでなく、<span class="keyword keyword-3">必ずコメントを書く</span>ことで行動しやすくなります。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card-title">モニタリングしない、細部に没頭するタイプ</h3>
+                        <p class="text">一度誰かに厳しく叱られた方が良いでしょう。<span class="keyword keyword-1">報告・連絡・相談</span>の重要性を理解することが必要です。</p>
+                        <p class="text">自分が発注者側の立場になってみると視点が変わります。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card-title">脱線しまくりタイプ</h3>
+                        <p class="text"><span class="keyword keyword-2">仕組みで解決</span>します。</p>
+                        <ul class="list">
+                            <li class="list-item">スマホを完全に消しておく、別の場所に置く</li>
+                            <li class="list-item">特定のアプリ（SNS、YouTubeなど）を開けないようにするアプリを使う</li>
+                            <li class="list-item">スクリーンタイムを設定する</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">臼井氏おすすめのガジェット</h2>
+                    <div class="card">
+                        <h3 class="card-title"><span class="gadget-icon">📚</span>Kindle</h3>
+                        <p class="text">電子書籍は集中できないと言われるが、Kindleは<span class="keyword keyword-1">読むことしかできない</span>ため集中できます。紙の本より読書時間が増え、読みたい本をすぐに購入して読めます。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card-title"><span class="gadget-icon">👓</span>Meta Ray-Ban</h3>
+                        <p class="text">音楽を聴く、電話をする、写真を撮る、動画を撮るなどができるサングラス。スポーツ時などにVログを撮るのに使います。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card-title"><span class="gadget-icon">🔋</span>モバイルバッテリー</h3>
+                        <p class="text">小型のAnker製を持ち歩き、友達に貸せるようにしています。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card-title"><span class="gadget-icon">💍</span>EVリング（Ebling）</h3>
+                        <p class="text">クレカと紐付け、コンビニや駐車場などで決済に使用します。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card-title"><span class="gadget-icon">⌚</span>Apple Watch</h3>
+                        <p class="text">睡眠トラッキング、iPhoneを鳴らす機能を使います。エアタグで紛失防止対策をしています。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card-title"><span class="gadget-icon">📱</span>MOSTのスマホリング</h3>
+                        <p class="text">iPhoneを直立させることができ、インスタライブやショート動画撮影に便利です。集合写真を撮る際にも使用します。</p>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">その他</h2>
+                    <p class="text">テスラが好きで、電気自動車はテスラ以外乗りたくないとのこと。テスラは<span class="keyword keyword-2">ボタンが少なく美しい</span>そうです。</p>
+                    <div class="bubble">
+                        <p class="text">無駄な時間は、<span class="keyword keyword-3">人の愚痴を言う時間</span>と<span class="keyword keyword-3">物を探す時間</span>。物を探す時間をなくすためにエアタグを使用しています。</p>
+                    </div>
+                    <p class="text">自分の人生を本気で生きている人とだけ関わりたいという姿勢を持っています。</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            インタビュー内容まとめ - グラフィックレコーディング風 © 2025
+        </div>
+    </div>
+</body>
+</html>
